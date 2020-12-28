@@ -5,13 +5,13 @@ pkgver=r151.a7c1a33
 pkgrel=1
 pkgdesc="Portable, simple C-language 9P client and server libary."
 arch=('i686' 'x86_64')
-url="https://github.com/0intro/libixp"
+url="https://github.com/bwhmather/libixp"
 license=('MIT')
 depends=()
 makedepends=('git' 'txt2tags')
 provides=("libixp")
 conflicts=("libixp" "libixp-hg")
-source=("libixp::git+$url")
+source=("libixp::git+https://github.com/bwhmather/libixp.git")
 md5sums=('SKIP')
 
 pkgver() {
