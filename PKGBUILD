@@ -14,31 +14,31 @@ depends=('')
 makedepends=('git' 'txt2tags')
 optdepends=()
 checkdepends=()
-provides=("${pkgname%-*}")
-conflicts=("${pkgname%-*}" "${pkgname%-*}-hg")
+provides=("libixp")
+conflicts=("libixp" "libixp-hg")
 replaces=()
 backup=()
 options=()
 changelog=
 install=
-source=("$pkgname::git+$url")
+source=("libixp::git+$url")
 noextract=()
 md5sums=('SKIP')
 
 pkgver() {
-  cd "$srcdir/$pkgname"
+  cd "$srcdir/libixp"
   printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 build() {
-  cd "$srcdir/$pkgname"
+  cd "$srcdir/libixp"
   make PREFIX=/usr
 }
 
 package() {
-  cd "$srcdir/$pkgname"
+  cd "$srcdir/libixp"
   make DESTDIR="$pkgdir/" PREFIX=/usr install
-  install -Dm644 README.md $pkgdir/usr/share/doc/${pkgname%-*}/README.md
-  install -Dm644 LICENSE $pkgdir/usr/share/licenses/${pkgname%-*}/LICENSE
+  install -Dm644 README.md $pkgdir/usr/share/doc/libixp/README.md
+  install -Dm644 LICENSE $pkgdir/usr/share/licenses/libixp/LICENSE
 }
 
