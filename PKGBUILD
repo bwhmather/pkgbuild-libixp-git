@@ -3,26 +3,15 @@
 pkgname=libixp-git
 pkgver=r151.a7c1a33
 pkgrel=1
-epoch=
 pkgdesc="Portable, simple C-language 9P client and server libary."
 arch=('i686' 'x86_64')
 url="https://github.com/0intro/libixp"
 license=('MIT')
-categories=()
-groups=()
 depends=()
 makedepends=('git' 'txt2tags')
-optdepends=()
-checkdepends=()
 provides=("libixp")
 conflicts=("libixp" "libixp-hg")
-replaces=()
-backup=()
-options=()
-changelog=
-install=
 source=("libixp::git+$url")
-noextract=()
 md5sums=('SKIP')
 
 pkgver() {
