@@ -1,0 +1,5 @@
+/pkg/
+/src/
+libixp-git-*.pkg.tar.zst
+/libixp/
+.SRCINFO
