@@ -1,4 +1,5 @@
-# Maintainer: aksr <aksr at t-com dot me>
+# Maintainer: Ben Mather <bwhmather@bwhmather.com>
+
 pkgname=libixp-git
 pkgver=r151.a7c1a33
 pkgrel=1
